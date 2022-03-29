@@ -5,10 +5,12 @@
   "main": "index.js",
   "devDependencies": {
     "hint": "^6.1.9",
+    "html-webpack-plugin": "^5.5.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "^3.21.0"
+    "stylelint-scss": "^3.21.0",
+    "webpack": "^5.70.0"
   },
   "scripts": {
     "format": "npx prettier  --write **/*.{html,js,json,md,json,yaml,yml,jsx}",
@@ -19,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BasitKorede/my-hello-microverse"
+    "url": "git+https://github.com/BasitKorede/my-hello-microverse.git"
   },
   "author": "",
   "license": "ISC",
