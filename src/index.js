@@ -2,7 +2,7 @@ import './style.css'
 
 const toDoItems = [
   { description: 'Do the chores', completed: false, index: 0 },
-  { description: 'Take a nap', completed: false, index: 1 },
+  { description: "Take a nap", completed: false, index: 1 },
   { description: 'Do Microverse Work', completed: false, index: 2 },
 ]
 const listWrap = document.querySelector('.todo-list-wrap')
