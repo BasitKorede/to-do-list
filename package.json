@@ -1,32 +1,39 @@
 {
-  "name": "hello-microverse",
+  "name": "todolist",
   "version": "1.0.0",
-  "description": "aA hello microverse project",
+  "description": "",
   "main": "index.js",
-  "devDependencies": {
-    "hint": "^6.1.9",
-    "html-webpack-plugin": "^5.5.0",
-    "stylelint": "^13.13.1",
-    "stylelint-config-standard": "^21.0.0",
-    "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "^3.21.0",
-    "webpack": "^5.70.0"
-  },
   "scripts": {
-    "format": "npx prettier  --write **/*.{html,js,json,md,json,yaml,yml,jsx}",
-    "format:check": "npx prettier  --check **/*.{html,js,json,md,json,yaml,yml}",
-    "lint": "npx stylelint \"**/*.css\" --fix",
-    "lint:check": "npx stylelint \"**/*.css\"",
-    "hint": "npx hint --telemetry=off ."
+    "build": "webpack",
+    "start": "webpack serve --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BasitKorede/my-hello-microverse.git"
+    "url": "git+https://github.com/BasitKorede/to-do-list.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/basitkorede/html-template/issues"
+    "url": "https://github.com/BasitKorede/to-do-list/issues"
   },
-  "homepage": "https://github.com/basitkorede/html-template#readme"
+  "homepage": "https://github.com/BasitKorede/to-do-list#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "css-loader": "^6.7.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.4",
+    "hint": "^6.1.10",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "stylelint": "13.3.x",
+    "stylelint-config-standard": "20.0.x",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "3.17.x",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  }
 }
