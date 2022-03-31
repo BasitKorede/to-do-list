@@ -152,11 +152,10 @@ body {
   background: transparent;
   border: none;
   outline: none;
-  cursor: move;
+  cursor: pointer;
 }
 
 .todo-list-wrap .list-item .move-item:hover {
-  cursor: alias;
   color: #545862;
   transition: 0.3s;
 }
