@@ -1,8 +1,10 @@
 import checkTask from './module/task-survey.js';
 import descriptionOnFocus from './module/focus-functionality.js';
+// eslint-disable-next-line import/no-cycle
 import {
   addNewItem, clearAll, updateInput, removeItem,
 } from './module/add-remove-implementation.js';
+
 import './style.css';
 
 // SET TODO ARR
