@@ -2,9 +2,8 @@ import checkTask from './task-survey.js';
 import descriptionOnFocus from './focus-functionality.js';
 import {
   addNewItem, clearAll, updateInput, removeItem,
-} from './add-remove-implementation'
+} from './add-remove-implementation.js';
 import './style.css';
-
 
 // SET TODO ARR
 let toDoArr = [];
@@ -46,7 +45,7 @@ toDoDescriptionsInputs.forEach((item) => item.addEventListener('focusin', (event
 toDoDescriptionsInputs.forEach((item) => item.addEventListener('focusout', (event) => descriptionOnFocus(event, item)));
 const toDoItems = [...document.querySelectorAll('.list-item')];
 
-//ADD ITEM
+// ADD ITEM
 const addNewButton = document.querySelector('.add-new-btn');
 addNewButton.addEventListener('click', (event) => addNewItem(event, toDoArr, toDoItems, listWrap));
 // CLEAR ALL
