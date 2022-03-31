@@ -1,8 +1,13 @@
 // eslint-disable-next-line import/no-cycle
 import { implementToDoItems, setToDoArr } from '../index.js';
-import checkTask from './task-survey.js';
+// eslint-disable-next-line import/no-cycle
+import {
+  onMouseOver, onMouseOut, onDragStart, onDragEnd,
+} from './drag-and-drop.js';
+import checkItem from './task-survey.js';
 import descriptionOnFocus from './focus-functionality.js';
 
+const listWrap = document.querySelector('.todo-list-wrap');
 const addNewInput = document.querySelector('.add-new-input');
 // UPDATE ITEM
 export const updateInput = (item) => {
@@ -27,11 +32,16 @@ export const removeItem = (item, arr, container) => {
   toDoDescriptionsInputs.forEach((item) => item.addEventListener('focusout', (event) => descriptionOnFocus(event, item)));
   toDoDescriptionsInputs.forEach((item) => item.addEventListener('input', () => updateInput(item)));
   arr = [...document.querySelectorAll('.list-item')];
-
+  arr.forEach((item) => {
+    item.addEventListener('mouseover', (event) => onMouseOver(event, item));
+    item.addEventListener('mouseout', (event) => onMouseOut(event, item));
+    item.addEventListener('dragstart', (event) => onDragStart(event, item));
+    item.addEventListener('drop', (event) => onDragEnd(event, item, arr, listWrap));
+  });
   const removeBtns = document.querySelectorAll('.remove-item');
   removeBtns.forEach((item) => item.addEventListener('click', () => removeItem(item, arr, container)));
   const toDoChecksInputs = [...document.querySelectorAll('.list-item .check-item')];
-  toDoChecksInputs.forEach((item) => item.addEventListener('change', () => checkTask(item)));
+  toDoChecksInputs.forEach((item) => item.addEventListener('change', () => checkItem(item)));
 };
 // ADD NEW ITEM
 export const addNewItem = (event, arr, items, container) => {
@@ -42,7 +52,7 @@ export const addNewItem = (event, arr, items, container) => {
   newItem.classList.add('list-item');
   newItem.dataset.key = index;
   newItem.draggable = true;
-  newItem.innerHTML = `<div class="list-item-check-name">
+  newItem.innerHTML += `<div class="list-item-check-name">
                           <input type="checkbox" class="check-item" data-key="${index}">
                           <input class="description-input" type="text" value="${description}">
                         </div>
@@ -71,10 +81,16 @@ export const addNewItem = (event, arr, items, container) => {
   toDoDescriptionsInputs.forEach((item) => item.addEventListener('focusout', (event) => descriptionOnFocus(event, item)));
   toDoDescriptionsInputs.forEach((item) => item.addEventListener('input', () => updateInput(item)));
   arr = [...document.querySelectorAll('.list-item')];
+  arr.forEach((item) => {
+    item.addEventListener('mouseover', (event) => onMouseOver(event, item));
+    item.addEventListener('mouseout', (event) => onMouseOut(event, item));
+    item.addEventListener('dragstart', (event) => onDragStart(event, item));
+    item.addEventListener('drop', (event) => onDragEnd(event, item, arr, listWrap));
+  });
   const removeBtns = document.querySelectorAll('.remove-item');
   removeBtns.forEach((item) => item.addEventListener('click', () => removeItem(item, arr, container)));
   const toDoChecksInputs = [...document.querySelectorAll('.list-item .check-item')];
-  toDoChecksInputs.forEach((item) => item.addEventListener('change', () => checkTask(item)));
+  toDoChecksInputs.forEach((item) => item.addEventListener('change', () => checkItem(item)));
   addNewInput.value = '';
 };
 // CLEAR ALL
@@ -96,8 +112,15 @@ export const clearAll = (container) => {
   toDoDescriptionsInputs.forEach((item) => item.addEventListener('focusout', (event) => descriptionOnFocus(event, item)));
   toDoDescriptionsInputs.forEach((item) => item.addEventListener('input', () => updateInput(item)));
   const arr = [...document.querySelectorAll('.list-item')];
+  arr.forEach((item) => {
+    item.addEventListener('mouseover', (event) => onMouseOver(event, item));
+    item.addEventListener('mouseout', (event) => onMouseOut(event, item));
+    item.addEventListener('dragstart', (event) => onDragStart(event, item));
+    item.addEventListener('drop', (event) => onDragEnd(event, item, arr, listWrap));
+  });
+
   const removeBtns = document.querySelectorAll('.remove-item');
   removeBtns.forEach((item) => item.addEventListener('click', () => removeItem(item, arr, container)));
   const toDoChecksInputs = [...document.querySelectorAll('.list-item .check-item')];
-  toDoChecksInputs.forEach((item) => item.addEventListener('change', () => checkTask(item)));
+  toDoChecksInputs.forEach((item) => item.addEventListener('change', () => checkItem(item)));
 };

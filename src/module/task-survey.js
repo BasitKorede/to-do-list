@@ -1,4 +1,4 @@
-const checkTask = (btn) => {
+const checkItem = (btn) => {
   const newArr = JSON.parse(localStorage.getItem('myToDos'));
   const arrElement = newArr.filter((item) => item.index === Number(btn.dataset.key))[0];
   const indexOfArrElement = newArr.indexOf(arrElement);
@@ -13,4 +13,4 @@ const checkTask = (btn) => {
   }
   localStorage.setItem('myToDos', JSON.stringify(newArr));
 };
-export default checkTask;
+export default checkItem;

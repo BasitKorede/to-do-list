@@ -1,10 +1,12 @@
-import checkTask from './module/task-survey.js';
+/* eslint-disable import/no-cycle */
+import checkItem from './module/task-survey.js';
 import descriptionOnFocus from './module/focus-functionality.js';
-// eslint-disable-next-line import/no-cycle
+import {
+  onMouseOver, onMouseOut, onDragStart, onDragEnd, onDragOver,
+} from './module/drag-and-drop.js';
 import {
   addNewItem, clearAll, updateInput, removeItem,
 } from './module/add-remove-implementation.js';
-
 import './style.css';
 
 // SET TODO ARR
@@ -29,7 +31,7 @@ export const implementToDoItems = (arr) => {
     }
     listWrap.innerHTML += `<li class="list-item ${completedClass}" data-key="${item.index}" draggable="true">
       <div class="list-item-check-name">
-         <input type="checkbox" class="check-item" data-key="${item.index}" ${isCompleted}>
+        <input type="checkbox" class="check-item" data-key="${item.index}" ${isCompleted}>
   <input class="description-input" data-key="${item.index}" type="text" value="${item.description}">
       </div>
       <button type="button" data-key="${item.index}" class="move-item"><i class="fas fa-ellipsis-v"></i></button>
@@ -40,14 +42,21 @@ export const implementToDoItems = (arr) => {
 implementToDoItems(toDoArr);
 // CHECK ITEMS
 const toDoChecksInputs = [...document.querySelectorAll('.list-item .check-item')];
-toDoChecksInputs.forEach((item) => item.addEventListener('change', () => checkTask(item)));
+toDoChecksInputs.forEach((item) => item.addEventListener('change', () => checkItem(item)));
 // FOCUS ITEMS
 const toDoDescriptionsInputs = [...document.querySelectorAll('.list-item .description-input')];
 toDoDescriptionsInputs.forEach((item) => item.addEventListener('focusin', (event) => descriptionOnFocus(event, item)));
 toDoDescriptionsInputs.forEach((item) => item.addEventListener('focusout', (event) => descriptionOnFocus(event, item)));
+// DRAG AND DROP FUNCTIONS
 const toDoItems = [...document.querySelectorAll('.list-item')];
-
-// git ADD ITEM
+toDoItems.forEach((item) => {
+  item.addEventListener('mouseover', (event) => onMouseOver(event, item));
+  item.addEventListener('mouseout', (event) => onMouseOut(event, item));
+  item.addEventListener('dragstart', (event) => onDragStart(event, item));
+  item.addEventListener('drop', (event) => onDragEnd(event, item, toDoItems, listWrap));
+});
+listWrap.addEventListener('dragover', (event) => onDragOver(event, listWrap));
+// ADD ITEM
 const addNewButton = document.querySelector('.add-new-btn');
 addNewButton.addEventListener('click', (event) => addNewItem(event, toDoArr, toDoItems, listWrap));
 // CLEAR ALL
