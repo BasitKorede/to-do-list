@@ -12,7 +12,7 @@ export const updateInput = (item) => {
   newArr[indexOfNewItem].description = item.value;
   localStorage.setItem('myToDos', JSON.stringify(newArr));
 };
-// REMOVE ITEM+-
+// REMOVE ITEM
 export const removeItem = (item, arr, container) => {
   const newArr = JSON.parse(localStorage.getItem('myToDos'));
   const removedItem = newArr.filter((item2) => item2.index === Number(item.dataset.key))[0];
@@ -37,7 +37,7 @@ export const removeItem = (item, arr, container) => {
 export const addNewItem = (event, arr, items, container) => {
   event.preventDefault();
   const description = addNewInput.value;
-  const index = arr.length;
+  const index = arr.length + 1;
   const newItem = document.createElement('li');
   newItem.classList.add('list-item');
   newItem.dataset.key = index;
