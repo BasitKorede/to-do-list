@@ -1,7 +1,8 @@
-import { implementToDoItems, setToDoArr } from './index.js';
+// eslint-disable-next-line import/no-cycle
+import { implementToDoItems, setToDoArr } from '../index.js';
 import checkTask from './task-survey.js';
 import descriptionOnFocus from './focus-functionality.js';
-const listWrap = document.querySelector('.todo-list-wrap');
+
 const addNewInput = document.querySelector('.add-new-input');
 // UPDATE ITEM
 export const updateInput = (item) => {
