@@ -65,7 +65,6 @@ export const onDragEnd = (event, item, arr, container) => {
   const toDoChecksInputs = [...document.querySelectorAll('.list-item .check-item')];
   toDoChecksInputs.forEach((item) => item.addEventListener('change', () => checkItem(item)));
 };
-
 // eslint-disable-next-line no-unused-vars
 export const onDragOver = (event, container) => {
   event.preventDefault();

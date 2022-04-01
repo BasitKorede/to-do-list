@@ -10,6 +10,7 @@ import {
 import './style.css';
 
 // SET TODO ARR
+
 let toDoArr = [];
 export const setToDoArr = () => {
   if (JSON.parse(localStorage.getItem('myToDos'))) {
