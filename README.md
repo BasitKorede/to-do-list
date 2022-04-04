@@ -1,15 +1,34 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Hello Microverse
+# To Do List
 
-> A basic hello microverse project to test our knowledege on the use of linters.
+> A simple to do list app that makes usr add a to do list item and remove them when completed 
 
 ## Built With
 
-- HTML
-- Frameworks
-- Technologies used
+ Semantic HTML
+- HTML Forms
 
+- Css
+- positioning
+- PSuedo Classes
+- Flexbox
+
+Javascrpit
+
+- Dom Manipulation and `EventListner` with handler functions
+- Named and anonymous arrow functions
+- Arrays and Object
+- Array manipulation with, `forEach`
+- Localstorage API
+- JSON.Parse
+- JSON.Stringify
+- Javascript Classes and Methods
+
+- Css
+- positioning
+- PSuedo Classes
+- Flexb
 ## Live Demo (if available)
 
 [Live Demo Link](https://livedemo.com)
@@ -60,18 +79,6 @@ You can also check against Webhint:
 npx hint --telemetry=off .
 ```
 
-## 👤 Author
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
 ## Authors
 
 👤 **Author1**
@@ -99,7 +106,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Hat tip to anyone whose code was used
-- Inspiration
+- Microverse 
 - etc
 
 ## 📝 License
