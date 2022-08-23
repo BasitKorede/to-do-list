@@ -24,6 +24,7 @@ Javascrpit
 - JSON.Parse
 - JSON.Stringify
 - Javascript Classes and Methods
+- Webpack
 
 - Css
 - positioning
@@ -31,7 +32,7 @@ Javascrpit
 - Flexb
 ## Live Demo (if available)
 
-[Live Demo Link](https://deploy-preview-3--basit-korede-to-do-list.netlify.app/)
+[Live Demo Link](https://basit-korede-to-do-list.netlify.app/)
 
 
 
