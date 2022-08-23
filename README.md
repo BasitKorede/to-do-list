@@ -24,6 +24,7 @@ Javascrpit
 - JSON.Parse
 - JSON.Stringify
 - Javascript Classes and Methods
+- Webpack
 
 - Css
 - positioning
@@ -31,7 +32,7 @@ Javascrpit
 - Flexb
 ## Live Demo (if available)
 
-[Live Demo Link](https://deploy-preview-3--basit-korede-to-do-list.netlify.app/)
+[Live Demo Link](https://basit-korede-to-do-list.netlify.app/)
 
 
 
@@ -76,13 +77,12 @@ You can also check against Webhint:
 npx hint --telemetry=off .
 ```
 
-## Authors
+## Author
 
-👤 **Author1**
+- GitHub: (https://github.com/BasitKorede)
+- Twitter: (https://twitter.com/twitterhandle)
+- LinkedIn: (https://www.linkedin.com/in/basit-korede/)
 
-- GitHub: [@githubhandle](https://github.com/BasitKorede)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/basit-korede/)
 
 ## 🤝 Contributing
 
