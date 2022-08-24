@@ -24,7 +24,6 @@ Javascrpit
 - JSON.Parse
 - JSON.Stringify
 - Javascript Classes and Methods
-- Webpack
 
 - Css
 - positioning
@@ -32,9 +31,14 @@ Javascrpit
 - Flexb
 ## Live Demo (if available)
 
-[Live Demo Link](https://basit-korede-to-do-list.netlify.app/)
+[Live Demo Link](https://livedemo.com)
 
+## Getting Started
 
+**This is an example of how you may give instructions on setting up your project locally.**
+**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+
+To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
@@ -46,8 +50,6 @@ Javascrpit
 
 - Clone the project
 
-To get a local copy up and running follow these simple example steps.
- 
 ```bash
 git clone https://github.com/basitkorede/html-template.git
 
@@ -77,13 +79,12 @@ You can also check against Webhint:
 npx hint --telemetry=off .
 ```
 
-## Authors
 
-👤 **Author1**
+👤 **BASIT KOREDE**
 
-- GitHub: [@githubhandle](https://github.com/BasitKorede)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/basit-korede/)
+- GitHub: [BasitKorede](https://github.com/BasitKorede)
+- Twitter: [Basit_Korede2](https://twitter.com/basit_korede2)
+- LinkedIn: [Basit-Korede](https://www.linkedin.com/in/basit-korede/)
 
 ## 🤝 Contributing
 
@@ -96,7 +97,10 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
+
+- Hat tip to anyone whose code was used
 - Microverse 
+- etc
 
 ## 📝 License
 
